@@ -19,7 +19,7 @@ describe('GameComponent', () => {
     fixture = TestBed.createComponent(GameComponent);
 });
 
-  it('should create the app', () => {
+  it('should render', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
