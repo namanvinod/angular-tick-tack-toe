@@ -72,4 +72,16 @@ describe('SquareComponent', () => {
     
     expect(isEventTriggered).toBeTruthy();
   });
+
+  it('should send square index on square click', () => {
+    const component = new SquareComponent();
+    component.squareIndex = 2;
+    let receivedValue: number = -1;
+    component.squareAction.subscribe((value: number)=> {
+        receivedValue = value;
+    });
+    component.onSquareClick(null);
+    
+    expect(receivedValue).toBe(2);
+  });
 });

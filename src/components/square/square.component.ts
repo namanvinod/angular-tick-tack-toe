@@ -6,10 +6,11 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
     styleUrls: ['./square.component.css']
 })
 export class SquareComponent {
+    @Input() squareIndex!: number;
     @Input() squareValue!: string;
     @Output() squareAction = new EventEmitter();
 
     onSquareClick(event: any) {
-        this.squareAction.emit(event);
+        this.squareAction.emit(this.squareIndex);
     }
 }
