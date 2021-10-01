@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
     selector: 'square',
@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
     styleUrls: ['./square.component.css']
 })
 export class SquareComponent {
+    @Input() squareValue!: string;
+    @Output() squareAction = new EventEmitter();
 
+    onSquareClick(event: any) {
+        this.squareAction.emit(event);
+    }
 }
