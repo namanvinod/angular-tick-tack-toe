@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
     selector: 'square',
     templateUrl: './square.component.html',
-    styleUrls: ['./square.component.css']
+    styleUrls: ['./square.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SquareComponent {
     @Input() squareIndex!: number;
