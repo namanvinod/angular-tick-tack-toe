@@ -46,6 +46,22 @@ describe('SquareComponent', () => {
     expect(htmlElement.querySelector('.square')?.textContent?.trim()).toBe('X');
   });
 
+  it('should display correct background when X is set in a square', () => {
+    const component = fixture.componentInstance;
+    component.squareValue = 'X';
+    fixture.detectChanges();
+    const htmlElement = fixture.nativeElement as HTMLElement;
+    expect(htmlElement.querySelector('.square.first-player')).not.toBe(null);
+  });
+
+  it('should display correct background when O is set in a square', () => {
+    const component = fixture.componentInstance;
+    component.squareValue = 'O';
+    fixture.detectChanges();
+    const htmlElement = fixture.nativeElement as HTMLElement;
+    expect(htmlElement.querySelector('.square.second-player')).not.toBe(null);
+  });
+
   it('should trigger event on square click', () => {
     const component = new SquareComponent();
     let isEventTriggered = false;
