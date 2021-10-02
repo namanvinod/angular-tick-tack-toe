@@ -11,7 +11,7 @@ export class SquareComponent {
     @Input() squareValue!: string;
     @Output() squareAction = new EventEmitter();
 
-    onSquareClick(event: any) {
+    onSquareClick(_: any) {
         this.squareAction.emit(this.squareIndex);
     }
 }
