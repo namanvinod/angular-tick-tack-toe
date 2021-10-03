@@ -35,4 +35,10 @@ describe('GameComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.game-container')?.textContent?.trim()).toBe('Current Player: X');
   });
+
+  it(`should render Board component`, () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('Board')).not.toBe(null);
+  });
 });
