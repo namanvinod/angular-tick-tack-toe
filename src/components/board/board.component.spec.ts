@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SquareComponent } from '../square/square.component';
-import { BoardComponent } from './board.component';
+import { BoardComponent, SquareComponent } from '../';
 
 describe('BoardComponent', () => {
   let component: BoardComponent;

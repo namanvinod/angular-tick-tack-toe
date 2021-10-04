@@ -1,9 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { BoardComponent } from '../board/board.component';
-import { SquareComponent } from '../square/square.component';
-import { GameComponent } from './game.component';
+import { GameComponent, BoardComponent, SquareComponent } from '../';
 
 describe('GameComponent', () => {
     let fixture: ComponentFixture<any>;

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { SquareComponent } from './square.component';
+import { SquareComponent } from '../';
 
 describe('SquareComponent', () => {
     let fixture: ComponentFixture<any>;
