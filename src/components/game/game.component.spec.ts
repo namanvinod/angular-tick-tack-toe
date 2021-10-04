@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { BoardComponent } from '../board/board.component';
+import { SquareComponent } from '../square/square.component';
 import { GameComponent } from './game.component';
 
 describe('GameComponent', () => {
@@ -12,8 +14,10 @@ describe('GameComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        GameComponent
-      ],
+        GameComponent,
+        BoardComponent,
+        SquareComponent
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(GameComponent);
@@ -39,6 +43,6 @@ describe('GameComponent', () => {
   it(`should render Board component`, () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('Board')).not.toBe(null);
+    expect(compiled.querySelector('board')).not.toBe(null);
   });
 });

@@ -13,7 +13,7 @@ describe('SquareComponent', () => {
       ],
       declarations: [
         SquareComponent
-      ],
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(SquareComponent);

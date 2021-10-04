@@ -1,7 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { GameComponent } from 'src/components/game/game.component';
+
 import { AppComponent } from './app.component';
+import { BoardComponent } from 'src/components/board/board.component';
+import { GameComponent } from 'src/components/game/game.component';
+import { SquareComponent } from 'src/components/square/square.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -11,8 +14,10 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        GameComponent
-      ],
+        GameComponent,
+        BoardComponent,
+        SquareComponent
+      ]
     }).compileComponents();
   });
 
